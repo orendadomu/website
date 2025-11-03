@@ -33,7 +33,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/website/'),
+  history: createWebHistory('/'),
   linkExactActiveClass: 'border-indigo-700',
   routes,
 });

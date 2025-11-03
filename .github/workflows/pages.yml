@@ -17,6 +17,9 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
+      - run: |
+          echo "chillhouse.kiev.ua" > dist/CNAME
+          cp dist/index.html dist/404.html  # если SPA
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
