@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     port: 8080,
   },
-  base: "/website/",
+  base: "/",
   plugins: [vue(), eslintPlugin(), svgLoader()],
   resolve: {
     alias: {
