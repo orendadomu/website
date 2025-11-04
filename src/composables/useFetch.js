@@ -4,9 +4,11 @@ import { createFetch } from '@vueuse/core'
 // import router from "@/router/index.js";
 // import { useAuth } from '@/store/auth'
 
+const API = import.meta.env.VITE_BASE_URL
+
 export const useMyFetch = createFetch({
-  // baseUrl: process.env.BASE_URL + '/api',
-  baseUrl: 'https://back-gglm.onrender.com' + '/api', // for tests
+  // baseUrl: 'https://back-gglm.onrender.com' + '/api', // for tests
+  baseUrl: API,
   options: {
     async beforeFetch({ options }) {
       const token = localStorage.getItem('token') || ''

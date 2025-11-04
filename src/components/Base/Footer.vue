@@ -36,6 +36,10 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 480px) {
+    padding: $padding_mobile;
+  }
+
   &__social {
     display: flex;
     align-items: center;

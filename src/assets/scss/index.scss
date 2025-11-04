@@ -60,6 +60,15 @@ body {
     margin    : 24px auto;
     text-align: center;
     width     : 80%;
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.app-line {
+    position: relative;
+    top     : -120px;
 }
 
 .multiselect {
@@ -105,21 +114,33 @@ body {
         background: $background-select;
     }
 
+    // &--active &__tags {
+    //     background: white;
+    //     color     : black;
+    // }
+
+    // &--active &__single {
+    //     color: black;
+    // }
+
 
     &__content {
         &-wrapper {
-            background       : $background-select;
+            background          : $background-select;
+            // background       : white;
+            // color            : black !important;
             // border-radius : 0;
-            color            : $font-color;
-            text-transform   : uppercase;
-            border           : 1px solid $border-color;
+            color               : $font-color;
+            text-transform      : uppercase;
+            border              : 1px solid $border-color;
         }
     }
 
     &__option {
-        background: none !important;
+        background   : none !important;
         color     : $font-color;
-        font-size : $font-size;
+        // color        : black;
+        font-size    : $font-size;
 
         // &:hover {
         //     background: none;

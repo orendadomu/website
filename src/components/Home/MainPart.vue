@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import ArrowDown from "@/components/Icons/ArrowDown.vue"
+import ArrowDown from "@/components/Icons/ArrowDown.vue";
 const navigateTo = (link) => {
   document
     .querySelector(`.${link}`)
@@ -42,21 +42,22 @@ $font-border-color: rgba(136, 80, 233, 0.75);
 // }
 .main {
   height: 70vh;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
   position: relative;
   background-size: cover;
   //   background-position: center;
   background-repeat: no-repeat;
   background-image: url("/img/bg.jpg");
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   @media screen and (min-width: 1200px) {
+    height: 100vh;
+  }
+
+  @media screen and (max-width: 480px) {
     height: 100vh;
   }
 
@@ -77,15 +78,35 @@ $font-border-color: rgba(136, 80, 233, 0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
 
   &__heading {
     font-size: 52px;
 
+    @media screen and (max-width: 480px) {
+      font-size: 40px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 36px;
+    }
+
     span {
       font-size: 72px;
       text-shadow: -9px 0 $font-border-color, 0 2px $font-border-color,
         2px 0 $font-border-color, 0 -2px $font-border-color;
+
+      @media screen and (max-width: 480px) {
+        font-size: 64px;
+      }
+
+      @media screen and (max-width: 400px) {
+        font-size: 58px;
+      }
     }
   }
 

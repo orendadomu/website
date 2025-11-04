@@ -1,5 +1,6 @@
 <template>
   <div class="prices">
+    <div class="prices__line app-line"></div>
     <h2 class="app-heading">
       {{ $t("prices") }}
     </h2>
@@ -40,18 +41,29 @@ const prices = {
 .prices {
   padding: $padding;
 
+  @media screen and (max-width: 480px) {
+    padding: $padding_mobile;
+  }
+
   &__items {
     margin-top: $margin-big;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     // grid-gap: $margin-small;
     grid-gap: $margin-big;
+
+    @media screen and (max-width: 480px) {
+      grid-template-columns: 1fr;
+      width: 80%;
+      margin: $padding-mobile auto;
+    }
   }
 
   &__item {
     border-radius: 4px;
     border: 1px solid $active-color;
     position: relative;
+    text-align: center;
 
     &-head,
     &-body {

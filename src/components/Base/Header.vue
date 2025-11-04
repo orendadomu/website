@@ -1,23 +1,6 @@
 <template>
   <header class="app-header" :class="{ 'app-header--bg': isHeaderBg }">
     <ul class="app-header__nav">
-      <!-- <router-link
-        v-for="link in pagesList"
-        :key="link"
-        v-slot="{ navigate }"
-        :to="{ name: link }"
-        custom
-      >
-        <li
-          role="link"
-          class="app-header__nav-link"
-          @click="navigate"
-          @keypress.enter="navigate"
-        >
-          {{ link }}
-        </li>
-      </router-link> -->
-
       <li
         v-for="(item, i) in navigateButtons"
         :key="i"
@@ -46,8 +29,11 @@
           <img src="/img/tg.svg" style="width: 30px" />
         </a>
 
-        <a class="app-header__social-link" href="tel:+380777987777">
-          <img src="/img/phone.svg" style="width: 28px" />
+        <a
+          class="app-header__social-link app-header__social-link--phone"
+          href="tel:+380777987777"
+        >
+          <img src="/img/phone.svg" />
           <p>+ (38) 077-798-77-77</p>
         </a>
       </div>
@@ -95,7 +81,7 @@ const options = ["en", "ua"];
 
 const navigateTo = (link) => {
   document
-    .querySelector(`.${link}`)
+    .querySelector(`.${link}__line`)
     .scrollIntoView({ block: "start", behavior: "smooth" });
 };
 
@@ -127,6 +113,10 @@ onMounted(() => {
   border-bottom: 1px solid $border-color;
   transition: background 0.1s;
 
+  @media screen and (max-width: 480px) {
+    padding: $padding_mobile;
+  }
+
   &--bg {
     background: $background-color;
   }
@@ -134,6 +124,10 @@ onMounted(() => {
   &__nav {
     padding-left: 0;
     display: flex;
+
+    @media screen and (max-width: 480px) {
+      display: none;
+    }
 
     &-link {
       // text-transform: capitalize;
@@ -167,6 +161,26 @@ onMounted(() => {
       align-items: center;
       justify-content: center;
 
+      &--phone {
+        img {
+          width: 28px;
+
+          @media screen and (max-width: 480px) {
+            margin-right: 0 !important;
+            width: 24px !important;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 46px;
+          height: 46px;
+
+          p {
+            display: none;
+          }
+        }
+      }
+
       &--circle {
         width: 46px;
         height: 46px;
@@ -198,6 +212,15 @@ onMounted(() => {
   &__right {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      justify-content: space-between;
+
+      .multiselect {
+        width: 96px;
+      }
+    }
   }
 }
 </style>

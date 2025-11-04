@@ -20,7 +20,7 @@
           class="tabs__list-tab"
           :class="{ active: activeTab == tab.id }"
         >
-          <Card v-for="item in tab.content" :key="item" :content="item"  />
+          <Card v-for="item in tab.content" :key="item" :content="item" />
         </li>
       </ul>
     </div>
@@ -178,6 +178,11 @@ const selectTab = (id) => {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 16px;
       padding: 16px 0;
+
+      @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+      }
 
       &.active {
         opacity: 1;

@@ -1,6 +1,7 @@
 
 <template>
   <div class="location">
+    <div class="location__line app-line"></div>
     <h2 class="app-heading">
       {{ $t("location_header") }}
     </h2>
@@ -31,11 +32,19 @@ const center = { lat: 50.397965, lng: 30.523857 };
   flex-direction: column;
   align-items: center;
 
+  @media screen and (max-width: 480px) {
+    padding: $padding_mobile;
+  }
+
   &__map {
     width: 80%;
     height: 500px;
     border: none;
     border-radius: $border-radius;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
 }
 </style>

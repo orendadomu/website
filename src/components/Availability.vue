@@ -1,5 +1,6 @@
 <template>
   <div class="availability">
+    <div class="availability__line app-line"></div>
     <h2 class="app-heading mb-max">
       {{ $t("availability_header") }}
     </h2>
@@ -68,6 +69,10 @@ const disabledRanges = computed(() =>
   padding: $padding;
   margin: 0 auto;
 
+  @media screen and (max-width: 480px) {
+    padding: $padding-mobile;
+  }
+
   &__wrap {
     display: grid;
     // grid-template-columns: 40% 60%;
@@ -78,9 +83,13 @@ const disabledRanges = computed(() =>
   }
 
   &__content {
-    min-width: 400px;
+    // min-width: 400px;
     width: 80%;
     margin: 0 auto;
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
   }
 
   .vc {
