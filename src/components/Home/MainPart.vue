@@ -14,7 +14,7 @@
       </h1>
 
       <button class="main__more" @click="navigateTo('about')">
-        {{ $t("See more") }}
+        {{ $t("see_more") }}
         <ArrowDown class="main__more-icon" />
       </button>
     </div>
@@ -49,7 +49,7 @@ $font-border-color: rgba(136, 80, 233, 0.75);
   background-size: cover;
   //   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("img/bg.jpg");
+  background-image: url("/img/bg.jpg");
 
   display: flex;
   flex-direction: column;

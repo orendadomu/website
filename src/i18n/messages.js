@@ -34,7 +34,8 @@ export const messages = {
         prices_info: "More then 10 people + 1000 uah/person",
         deposit: "Deposit",
         deposit_info: "returned upon departure",
-        rules: "Check-in is at 15:00. Check out at 11:00 the next day."
+        rules: "Check-in is at 15:00. Check out at 11:00 the next day.",
+        see_more: "See more"
     },
     ua: {
         about: "Основне",
@@ -71,6 +72,7 @@ export const messages = {
         prices_info: "Більше 10 осіб + 1000 грн/особа",
         deposit: "Застава",
         deposit_info: "повертається при виїзді",
-        rules: "Заїзд о 15:00. Виїзд о 11:00 наступного дня."
+        rules: "Заїзд о 15:00. Виїзд о 11:00 наступного дня.",
+        see_more: "До галереї"
     },
 }

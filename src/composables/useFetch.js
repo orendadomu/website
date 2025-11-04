@@ -6,7 +6,7 @@ import { createFetch } from '@vueuse/core'
 
 export const useMyFetch = createFetch({
   // baseUrl: process.env.BASE_URL + '/api',
-  baseUrl: 'http://localhost:3000' + '/api', // for tests
+  baseUrl: 'https://back-gglm.onrender.com' + '/api', // for tests
   options: {
     async beforeFetch({ options }) {
       const token = localStorage.getItem('token') || ''

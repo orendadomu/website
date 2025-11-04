@@ -70,7 +70,8 @@ const disabledRanges = computed(() =>
 
   &__wrap {
     display: grid;
-    grid-template-columns: 40% 60%;
+    // grid-template-columns: 40% 60%;
+    // grid-template-columns: 40% 60%;
   }
 
   &__info {
@@ -78,6 +79,8 @@ const disabledRanges = computed(() =>
 
   &__content {
     min-width: 400px;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .vc {
