@@ -15,7 +15,7 @@
 
       <a
         class="app-footer__social-link"
-        href="https://telegram.me/arenda_dom_kiev"
+        href="https://t.me/ChillHouseKyiv"
         target="_blank"
       >
         <img src="/img/tg.svg" style="width: 30px" />

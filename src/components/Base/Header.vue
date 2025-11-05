@@ -23,9 +23,10 @@
 
         <a
           class="app-header__social-link app-header__social-link--circle"
-          href="https://telegram.me/arenda_dom_kiev"
+          href="https://t.me/ChillHouseKyiv"
           target="_blank"
         >
+        <!-- https://telegram.me/arenda_dom_kiev -->
           <img src="/img/tg.svg" style="width: 30px" />
         </a>
 
