@@ -59,6 +59,7 @@ $font-border-color: rgba(136, 80, 233, 0.75);
 
   @media screen and (max-width: 480px) {
     height: 100vh;
+    background-position-x: center;
   }
 
   &::before {
