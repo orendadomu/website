@@ -12,6 +12,7 @@
           :disabled-dates="disabledRanges"
           :attributes="attributes"
           expanded
+          :locale="{ id: locale === 'ua' ? 'ukr' : 'en', firstDayOfWeek: 2 }"
         />
         <!-- :columns="2"  -->
       </div>
@@ -23,6 +24,8 @@
 import { Calendar } from "v-calendar";
 import "v-calendar/style.css";
 import { computed, ref } from "vue";
+import { useI18n } from "vue-i18n";
+const { locale, t } = useI18n();
 
 import { useScreens } from "vue-screen-utils";
 // const columns = mapCurrent({ lg: 2 }, 1);
@@ -43,22 +46,10 @@ const attributes = ref([
   },
 ]);
 
-// const events = ref([
-//   {
-//     uid: '1234@airbnb.com',
-//     start: new Date('2025-10-22T09:00:00.000Z'),
-//     end:   new Date('2025-10-23T09:00:00.000Z'),
-//     summary: 'Airbnb Booking',
-//   },
-//   // ...другие
-// ])
-
 const disabledRanges = computed(() =>
-  //
   props.dates?.map((e) => ({
-    // В v-calendar можно давать Date-объекты или ISO-строки
     start: new Date(new Date(e.start).getTime()),
-    end: new Date(new Date(e.end).getTime() - 1),
+    end: new Date((new Date(e.end).setHours(new Date(e.end).getHours() - 3))),
     // end: new Date(new Date(e.end).getTime() - 1), // DTEND (excl) -> включительно
   }))
 );

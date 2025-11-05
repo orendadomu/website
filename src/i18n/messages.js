@@ -7,12 +7,12 @@ export const messages = {
         location: "Location",
         floor: "Floor",
         rooms: {
-            cinema: "Cinema",
+            cinema: "Home theater: Playstation Pro with games and professional karaoke are also connected",
             garage: "Garage up to 5 cars",
-            gameroom_1: "First gameroom",
+            gameroom_1: "Mini kitchen and power training machine",
             bathroom_1: "First bathroom",
-            living_room: "Living room",
-            kitchen: "Kitchen",
+            living_room: "Living room with fireplace",
+            kitchen: "Kitchen with all appliances: microwave, coffee machine, dishwasher, two refrigerators, freezer, etc.",
             kitchen_2: "Place for eat up to 22 people",
             gameroom_2: "Second gameroom: ping-pong, air hockey, catch toys machine",
             bedroom_1: "First bedroom",
@@ -35,7 +35,7 @@ export const messages = {
         deposit: "Deposit",
         deposit_info: "returned upon departure",
         rules: "Check-in is at 15:00. Check out at 11:00 the next day.",
-        see_more: "See more"
+        see_dates: "Available dates"
     },
     ua: {
         about: "Основне",
@@ -45,11 +45,12 @@ export const messages = {
         location: "Локація",
         floor: "Поверх",
         rooms: {
-            cinema: "Домашній кінотеатр",
+            cinema: "Домашній кінотеатр: підключена також Playstation Pro з іграми та професійне караоке",
             garage: "Гараж на 5 машин",
-            gameroom_1: "Перша ігрова кімната: баскетбол, хапайка...",
+            // gameroom_1: "Перша ігрова кімната: баскетбол, хапайка...",
+            gameroom_1: "Міні кухня та силовий тренажер",
             bathroom_1: "Перша ванна кімната",
-            living_room: "Гостинна",
+            living_room: "Гостинна з каміном",
             kitchen: "Кухня із усією технікою: мікрохвильовка, кавоварка, посудомийка, два холодильника, морозильна камера і тд.",
             kitchen_2: "Обідній стіл на 22 людини",
             gameroom_2: "Друга ігрова кімната: пінг-понг, аерохокей, хапайка",
@@ -73,6 +74,6 @@ export const messages = {
         deposit: "Застава",
         deposit_info: "повертається при виїзді",
         rules: "Заїзд о 15:00. Виїзд о 11:00 наступного дня.",
-        see_more: "До галереї"
+        see_dates: "Вільні дати"
     },
 }

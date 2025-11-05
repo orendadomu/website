@@ -13,8 +13,8 @@
         {{ $t("main_heading") }}
       </h1>
 
-      <button class="main__more" @click="navigateTo('about')">
-        {{ $t("see_more") }}
+      <button class="main__more" @click="navigateTo('availability__line')">
+        {{ $t("see_dates") }}
         <ArrowDown class="main__more-icon" />
       </button>
     </div>
@@ -127,6 +127,7 @@ $font-border-color: rgba(136, 80, 233, 0.75);
     font-size: 16px;
     transition: all 0.1s;
     cursor: pointer;
+    color: black;
 
     &:hover {
       background: none;
