@@ -13,7 +13,11 @@
         {{ $t("main_heading") }}
       </h1>
 
-      <button class="main__more" @click="navigateTo('availability__line')">
+      <button
+        type="button"
+        class="main__more"
+        @click="navigateTo('availability__line')"
+      >
         {{ $t("see_dates") }}
         <ArrowDown class="main__more-icon" />
       </button>
@@ -47,7 +51,8 @@ $font-border-color: rgba(136, 80, 233, 0.75);
   background-size: cover;
   //   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/img/bg.jpg");
+  // background-image: url("/img/bg.jpg");
+  background-image: url("/preview.jpg");
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -39,13 +39,7 @@ const tabs = [
   },
   {
     id: 2,
-    content: [
-      "living_room",
-      "kitchen",
-      "kitchen_2",
-      "bedroom_1",
-      "bathroom_2",
-    ],
+    content: ["living_room", "kitchen", "kitchen_2", "bedroom_1", "bathroom_2"],
   },
   {
     id: 3,
@@ -177,6 +171,10 @@ const selectTab = (id) => {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 16px;
       padding: 16px 0;
+
+      @media screen and (max-width: 1023px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       @media screen and (max-width: 480px) {
         display: flex;

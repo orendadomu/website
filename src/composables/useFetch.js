@@ -7,7 +7,6 @@ import { createFetch } from '@vueuse/core'
 const API = import.meta.env.VITE_BASE_URL
 
 export const useMyFetch = createFetch({
-  // baseUrl: 'https://back-gglm.onrender.com' + '/api', // for tests
   baseUrl: API,
   options: {
     async beforeFetch({ options }) {
