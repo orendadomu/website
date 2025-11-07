@@ -1,21 +1,15 @@
 
 import { createFetch } from '@vueuse/core'
-// import { useToast } from "@/main"
-// import router from "@/router/index.js";
-// import { useAuth } from '@/store/auth'
 
 const API = import.meta.env.VITE_BASE_URL
 
 export const useMyFetch = createFetch({
   baseUrl: API,
+  // baseUrl: 'http://localhost:3001/api',
   options: {
     async beforeFetch({ options }) {
       const token = localStorage.getItem('token') || ''
       if (token) options.headers.Authorization = `Bearer ${token}`
-      // options.headers['Content-Type'] = 'application/json'
-      // options.headers['Sec-Fetch-Dest'] = 'document'
-      // options.headers['Accept'] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
-      // options.headers['Content-Type'] = 'multipart/form-data; boundary=----WebKitFormBoundaryqfkaCIzcfcenB0jq'
       return { options }
     },
     onFetchError(ctx) {
@@ -51,14 +45,5 @@ export const useRequest = async (url, options = { method: 'GET' }) => {
 }
 
 const setError = ({ message, status }) => {
-  // if (status === 401) {
-  //   const authStore = useAuth()
-  //   authStore.logOut()
-  //   router.push({ name: 'login' })
-  // }
-
-  // setTimeout(() => {
-  //   useToast(status === 404 ? 'Not found' : message, "error")
-  // }, 250)
   throw new Error(message)
 }

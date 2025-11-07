@@ -24,6 +24,20 @@
         </li>
       </ul>
     </div>
+
+    <div class="tabs__header--mobile">
+      <ul class="tabs__header">
+        <li
+          v-for="(tab, i) in tabs"
+          :key="i"
+          class="tabs__header-item"
+          :class="{ active: activeTab == tab.id }"
+          @click="selectTab(tab.id)"
+        >
+          {{ tab.id }} {{ $t("floor") }}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -84,6 +98,14 @@ const selectTab = (id) => {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    &--mobile {
+      display: none;
+
+      @media screen and (max-width: 480px) {
+        display: block;
+      }
+    }
 
     // Кнопка одного таба
     &-item {
