@@ -4,9 +4,16 @@
     <h2 class="app-heading mb-max">
       {{ $t("availability_header") }}
     </h2>
+    <p class="mb-max">
+      {{ $t("availability_info") }}
+    </p>
     <div class="availability__wrap">
       <div class="availability__info"></div>
       <div class="availability__content">
+        <div class="app-modal" v-if="isLoading">
+          <VueSpinner size="64" color="white" />
+        </div>
+
         <Calendar
           v-model="date"
           :disabled-dates="disabledRanges"
@@ -23,12 +30,14 @@
 <script setup>
 import { Calendar } from "v-calendar";
 import "v-calendar/style.css";
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
 import { useI18n } from "vue-i18n";
 const { locale, t } = useI18n();
+import { VueSpinner } from "vue3-spinners";
 
 import { useScreens } from "vue-screen-utils";
 // const columns = mapCurrent({ lg: 2 }, 1);
+const isLoading = ref(true)
 
 const props = defineProps({
   dates: {
@@ -36,6 +45,13 @@ const props = defineProps({
     // required: true,
   },
 });
+
+watch(
+  () => props.dates,
+  (val) => {
+    isLoading.value = false
+  }
+);
 
 const date = ref(new Date());
 
@@ -49,7 +65,7 @@ const attributes = ref([
 const disabledRanges = computed(() =>
   props.dates?.map((e) => ({
     start: new Date(new Date(e.start).getTime()),
-    end: new Date((new Date(e.end).setHours(new Date(e.end).getHours() - 3))),
+    end: new Date(new Date(e.end).setHours(new Date(e.end).getHours() - 3)),
     // end: new Date(new Date(e.end).getTime() - 1), // DTEND (excl) -> включительно
   }))
 );
@@ -59,6 +75,7 @@ const disabledRanges = computed(() =>
 .availability {
   padding: $padding;
   margin: 0 auto;
+  text-align: center;
 
   @media screen and (max-width: 480px) {
     padding: $padding-mobile;
@@ -77,6 +94,7 @@ const disabledRanges = computed(() =>
     // min-width: 400px;
     width: 80%;
     margin: 0 auto;
+    position: relative;
 
     @media screen and (max-width: 480px) {
       width: 100%;

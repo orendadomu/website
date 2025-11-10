@@ -35,7 +35,8 @@ export const messages = {
         deposit: "Deposit",
         deposit_info: "returned upon departure",
         rules: "Check-in is at 15:00. Check out at 11:00 the next day.",
-        see_dates: "Available dates"
+        see_dates: "Available dates",
+        availability_info: "The reserved dates are already marked in the calendar!"
     },
     ua: {
         about: "Основне",
@@ -73,6 +74,7 @@ export const messages = {
         deposit: "Застава",
         deposit_info: "повертається при виїзді",
         rules: "Заїзд о 15:00. Виїзд о 11:00 наступного дня.",
-        see_dates: "Вільні дати"
+        see_dates: "Вільні дати",
+        availability_info: "Заброньовані дати вже відмічені у календарі!"
     },
 }
