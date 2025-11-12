@@ -2,10 +2,10 @@
 import { createFetch } from '@vueuse/core'
 
 const API = import.meta.env.VITE_BASE_URL
+console.log('env', import.meta.env)
 
 export const useMyFetch = createFetch({
-  baseUrl: API,
-  // baseUrl: 'http://localhost:3001/api',
+  // baseUrl: API,
   options: {
     async beforeFetch({ options }) {
       const token = localStorage.getItem('token') || ''

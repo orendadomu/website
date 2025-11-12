@@ -21,6 +21,12 @@ export const useUsers = defineStore("users", {
         // },
         getCalendarEvents() {
             return useRequest(`getCalendarEvents`)
-        }
+        },
+        sendPhone({ phone }) {
+            return useRequest('send-phone', {
+                method: 'POST',
+                body: { phone }
+            })
+        },
     }
 })
