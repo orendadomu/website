@@ -2,6 +2,7 @@
 import { createFetch } from '@vueuse/core'
 
 const API = import.meta.env.VITE_BASE_URL
+console.log('env', import.meta.env)
 
 export const useMyFetch = createFetch({
   baseUrl: API,
