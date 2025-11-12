@@ -3,10 +3,8 @@ import { createFetch } from '@vueuse/core'
 
 const API = import.meta.env.VITE_BASE_URL
 const isProd = import.meta.env.PROD
-console.log('env', import.meta.env)
 
 export const useMyFetch = createFetch({
-  // baseUrl: API,
   baseUrl: isProd ? API : 'http://localhost:3001/api',
   options: {
     async beforeFetch({ options }) {
