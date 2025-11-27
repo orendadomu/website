@@ -17,6 +17,8 @@ import { createVfm } from 'vue-final-modal'
 import { createI18n } from "vue-i18n";
 import { messages } from "@/i18n/messages.js"
 
+import PrimeVue from 'primevue/config';
+
 const i18n = createI18n({
     locale: "ua",
     fallbackLocale: "en",
@@ -35,6 +37,7 @@ const vfm = createVfm()
 const pinia = createPinia();
 const app = createApp(App);
 
+app.use(PrimeVue);
 app.use(pinia);
 app.use(router);
 app.use(vfm)

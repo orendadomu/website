@@ -36,7 +36,8 @@ export const messages = {
         deposit_info: "returned upon departure",
         rules: "Check-in is at 15:00. Check out at 11:00 the next day.",
         see_dates: "Available dates",
-        availability_info: "The reserved dates are already marked in the calendar!"
+        availability_info: "The reserved dates are already marked in the calendar!",
+        entertainments_header: "Entertainments"
     },
     ua: {
         about: "Основне",
@@ -62,6 +63,18 @@ export const messages = {
             bathroom_4: "Четверта ванна кімната",
             bedroom_4: "Четверта спальня",
         },
+        entertainments: {
+            basketball: "Баскетбольний автомат",
+            billiards: "Більярд",
+            drums: "Барабани",
+            ping_pong: "Пінг-понг",
+            hockey: "Аерохокей",
+            table_football: "Настільний футбол",
+            power_training: "Силовий тренажер",
+            catch_toys: "Хапайка іграшок",
+            synthesizer: "Синтезатор",
+            mini_games: "Настільні ігри"
+        },
         contact_us: "Зв'язатись з нами",
         location_header: "Наша локація",
         location_text: "Будинок розташований в тихому і мальовничому районі, біля метро Деміївська, по адресі Цимбалів Яр, 23б. Це ідеальне місце для тих, хто хоче насолодитися спокоєм і затишком заміського життя, але при цьому залишатися поблизу міської інфраструктури.",
@@ -75,6 +88,7 @@ export const messages = {
         deposit_info: "повертається при виїзді",
         rules: "Заїзд о 15:00. Виїзд о 11:00 наступного дня.",
         see_dates: "Вільні дати",
-        availability_info: "Заброньовані дати вже відмічені у календарі!"
+        availability_info: "Заброньовані дати вже відмічені у календарі!",
+        entertainments_header: "Розваги"
     },
 }

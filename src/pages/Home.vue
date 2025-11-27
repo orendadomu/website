@@ -2,6 +2,7 @@
   <div class="home" ref="home">
     <MainPart />
     <About />
+    <Entertainments />
     <Prices />
     <Availability :dates="dates" />
     <div class="home__gradient">
@@ -21,6 +22,7 @@ import About from "@/components/Home/About.vue";
 import Prices from "@/components/Home/Prices.vue";
 import Availability from "@/components/Availability.vue";
 import Location from "@/components/Home/Location.vue";
+import Entertainments from "@/components/Home/Entertainments.vue"
 
 import AppFooter from "@/components/Base/Footer.vue";
 
