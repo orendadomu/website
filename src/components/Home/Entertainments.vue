@@ -6,11 +6,10 @@
     </h2>
     <Carousel
       :value="products"
-      :numVisible="3"
       :numScroll="1"
       :responsiveOptions="responsiveOptions"
       circular
-      :autoplayInterval="3000"
+      :autoplayInterval="400000"
       class="entertainments__carousel"
     >
       <template #item="slotProps">
@@ -23,7 +22,7 @@
           ></div>
 
           <div class="entertainments__slide-name">
-            {{ $t(`entertainments.${slotProps.data}`) }}
+            {{ $t(`entertainments_inner.${slotProps.data}`) }}
           </div>
         </div>
       </template>
@@ -46,17 +45,24 @@ const products = ref([
   "catch_toys",
   "synthesizer",
   "mini_games",
+  "karaoke",
+  "playstation",
 ]);
 
 const responsiveOptions = ref([
   {
-    breakpoint: "1400px",
-    numVisible: 4,
+    breakpoint: "1200px",
+    numVisible: 3,
     numScroll: 1,
   },
   {
     breakpoint: "1199px",
     numVisible: 3,
+    numScroll: 1,
+  },
+  {
+    breakpoint: "1024px",
+    numVisible: 2,
     numScroll: 1,
   },
   {
@@ -72,6 +78,22 @@ const responsiveOptions = ref([
 ]);
 </script>
 
+<style lang="scss">
+.p-carousel-prev-button svg, .p-carousel-next-button svg {
+  @media screen and (max-width: 480px) {
+    width: 16px;
+    position: relative;
+    left: -4px;
+  }
+}
+
+.p-carousel-next-button svg {
+  @media screen and (max-width: 480px) {
+    left: 4px;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
 .entertainments {
   padding: $padding;
@@ -80,7 +102,7 @@ const responsiveOptions = ref([
   align-items: center;
 
   @media screen and (max-width: 480px) {
-    padding: $padding_mobile;
+    padding: $padding_mobile 16px;
   }
 
   &__carousel {
@@ -93,12 +115,22 @@ const responsiveOptions = ref([
     text-align: center;
     margin: 10px;
 
+    @media screen and (max-width: 480px) {
+      margin: 0;
+      padding: 0 10px;
+    }
+
     &-image {
       height: 525px;
       margin: 10px 0;
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+
+      @media screen and (max-width: 480px) {
+        height: 400px;
+        // margin: 0;
+      }
     }
 
     &-name {

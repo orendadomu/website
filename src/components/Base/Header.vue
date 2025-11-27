@@ -56,7 +56,7 @@
 // const pagesList = ["home"]; // "nfts", "chats"
 const navigateButtons = [
   "about",
-  // "special",
+  "entertainments",
   "prices",
   "availability",
   "location",

@@ -23,6 +23,20 @@ export const messages = {
             bathroom_4: "Forth bathroom",
             bedroom_4: "Forth bedroom",
         },
+        entertainments_inner: {
+            basketball: "Баскетбольний автомат",
+            billiards: "Більярд",
+            drums: "Барабани",
+            ping_pong: "Пінг-понг",
+            hockey: "Аерохокей",
+            table_football: "Настільний футбол",
+            power_training: "Силовий тренажер",
+            catch_toys: "Хапайка іграшок",
+            synthesizer: "Синтезатор",
+            mini_games: "Настільні ігри",
+            karaoke: "Караоке у домашньому кінотеатрі",
+            playstation: "Playstation 5 Pro у домашньому кінотеатрі"
+        },
         contact_us: "Contact us",
         location_header: "Our location",
         location_text: "The house is located in a quiet and picturesque area, near the Demiivska metro station, at Tsymbaliv Yar 23b. It is an ideal place for those who want to enjoy the peace and quiet of suburban life while remaining close to urban infrastructure.",
@@ -46,6 +60,7 @@ export const messages = {
         availability: "Доступність",
         location: "Локація",
         floor: "Поверх",
+        entertainments: "Розваги",
         rooms: {
             cinema: "Домашній кінотеатр: підключена також Playstation 5 Pro з іграми та професійне караоке",
             garage: "Гараж на 5 машин",
@@ -63,7 +78,7 @@ export const messages = {
             bathroom_4: "Четверта ванна кімната",
             bedroom_4: "Четверта спальня",
         },
-        entertainments: {
+        entertainments_inner: {
             basketball: "Баскетбольний автомат",
             billiards: "Більярд",
             drums: "Барабани",
@@ -73,7 +88,9 @@ export const messages = {
             power_training: "Силовий тренажер",
             catch_toys: "Хапайка іграшок",
             synthesizer: "Синтезатор",
-            mini_games: "Настільні ігри"
+            mini_games: "Настільні ігри",
+            karaoke: "Караоке у домашньому кінотеатрі",
+            playstation: "Playstation 5 Pro у домашньому кінотеатрі"
         },
         contact_us: "Зв'язатись з нами",
         location_header: "Наша локація",
