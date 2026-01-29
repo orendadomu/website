@@ -20,7 +20,7 @@
 
     <p class="app-subheading">
       {{ $t("prices_info") }} <br />
-      {{ $t("deposit") }} {{ prices.weekdays }}$ ({{ $t("deposit_info") }})
+      {{ $t("deposit") }} 500$ ({{ $t("deposit_info") }})
       <br />
       {{ $t("rules") }}
     </p>
