@@ -2,7 +2,7 @@
   <div class="prices">
     <div class="prices__line app-line"></div>
     <h2 class="app-heading">
-      {{ $t("prices") }}
+      {{ $t("prices_heading") }}
     </h2>
     <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices" :key="key">
