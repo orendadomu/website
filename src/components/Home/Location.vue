@@ -36,6 +36,10 @@
     border: none;
     border-radius: $border-radius;
 
+    @media screen and (max-width: 1024px) {
+      height: 400px;
+    }
+
     @media screen and (max-width: 480px) {
       width: 100%;
     }

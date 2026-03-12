@@ -4,6 +4,7 @@
     <About />
     <Prices />
     <Availability :dates="dates" />
+    <Videos />
     <div class="home__gradient">
       <Location />
       <AppFooter />
@@ -21,6 +22,7 @@ import About from "@/components/Home/About.vue";
 import Prices from "@/components/Home/Prices.vue";
 import Availability from "@/components/Availability.vue";
 import Location from "@/components/Home/Location.vue";
+import Videos from "@/components/Home/Videos.vue";
 
 import AppFooter from "@/components/Base/Footer.vue";
 

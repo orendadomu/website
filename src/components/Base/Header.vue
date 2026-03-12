@@ -26,7 +26,7 @@
           href="https://t.me/ChillHouseKyiv"
           target="_blank"
         >
-        <!-- https://telegram.me/arenda_dom_kiev -->
+          <!-- https://telegram.me/arenda_dom_kiev -->
           <img src="/img/tg.svg" style="width: 30px" />
         </a>
 
@@ -59,6 +59,7 @@ const navigateButtons = [
   // "special",
   "prices",
   "availability",
+  "videos",
   "location",
 ];
 import { ref, watch, onMounted } from "vue";
