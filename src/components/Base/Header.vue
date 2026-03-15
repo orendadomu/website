@@ -59,7 +59,7 @@ const navigateButtons = [
   // "special",
   "prices",
   "availability",
-  "videos",
+  "video_view",
   "location",
 ];
 import { ref, watch, onMounted } from "vue";
@@ -115,7 +115,7 @@ onMounted(() => {
   border-bottom: 1px solid $border-color;
   transition: background 0.1s;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     padding: $padding_mobile;
   }
 
@@ -127,7 +127,7 @@ onMounted(() => {
     padding-left: 0;
     display: flex;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
 
@@ -215,7 +215,7 @@ onMounted(() => {
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       width: 100%;
       justify-content: space-between;
 

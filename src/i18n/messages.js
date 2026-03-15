@@ -38,8 +38,8 @@ export const messages = {
         rules: "Check-in is at 15:00. Check out at 11:00 the next day.",
         see_dates: "Available dates",
         availability_info: "The reserved dates are already marked in the calendar!",
-        videos_heading: "Video review",
-        videos: "Video"
+        video_view_heading: "Video review",
+        video_view: "Video"
     },
     ua: {
         about: "Основне",
@@ -80,7 +80,7 @@ export const messages = {
         rules: "Заїзд о 15:00. Виїзд о 11:00 наступного дня.",
         see_dates: "Вільні дати",
         availability_info: "Заброньовані дати вже відмічені у календарі!",
-        videos_heading: "Відеоогляд",
-        videos: "Відео"
+        video_view_heading: "Відеоогляд",
+        video_view: "Відео"
     },
 }

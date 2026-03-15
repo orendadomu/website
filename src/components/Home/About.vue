@@ -19,7 +19,7 @@ const activeFloor = ref(1);
   padding: $padding;
   padding-bottom: 0;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     padding: $padding_mobile;
   }
 }

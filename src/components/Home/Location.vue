@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     padding: $padding_mobile;
   }
 
