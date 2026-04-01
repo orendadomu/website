@@ -19,6 +19,8 @@
     </div>
 
     <p class="app-subheading">
+      <span class="color-red"> {{ $t("prices_discount") }} </span> <br />
+      <br />
       {{ $t("prices_info") }} <br />
       {{ $t("deposit") }} 500$ ({{ $t("deposit_info") }})
       <br />
@@ -31,13 +33,17 @@
 import { ref } from "vue";
 
 const prices = {
-  weekdays: "450",
-  friday_sunday: "600",
-  saturday: "850",
+  weekdays: "400",
+  friday_sunday: "700",
+  saturday: "950",
 };
 </script>
 
 <style lang="scss" scoped>
+.color-red {
+  color: red;
+}
+
 .prices {
   padding: $padding;
 

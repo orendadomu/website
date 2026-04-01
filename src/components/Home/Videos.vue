@@ -87,6 +87,8 @@ const activeSlide = ref(null);
 const openModal = (value) => {
   isModal.value = true;
   activeSlide.value = value - 1;
+
+  document.body.style.overflow = "hidden";
 };
 
 const clickOverlay = (el) => {
@@ -96,7 +98,8 @@ const clickOverlay = (el) => {
   if (target.nodeName === "VIDEO") return;
 
   isModal.value = false;
-  activeSlide.value = null
+  activeSlide.value = null;
+  document.body.style.overflow = "";
 };
 
 const updateVideo = (val, prev) => {
