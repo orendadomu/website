@@ -64,9 +64,8 @@ const attributes = ref([
 
 const disabledRanges = computed(() =>
   props.dates?.map((e) => ({
-    start: new Date(new Date(e.start).getTime()),
-    end: new Date(new Date(e.end).setHours(new Date(e.end).getHours() - 3)),
-    // end: new Date(new Date(e.end).getTime() - 1), // DTEND (excl) -> включительно
+    start: new Date(new Date(e.startDate).getTime()),
+    end: new Date(e.endDateInclusive),
   }))
 );
 </script>
