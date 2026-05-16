@@ -33,7 +33,7 @@ import { ref } from "vue";
 const prices = {
   weekdays: "400",
   friday_sunday: "800",
-  saturday: "1100",
+  saturday: "1200",
 };
 </script>
 
