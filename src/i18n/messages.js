@@ -32,8 +32,8 @@ export const messages = {
         friday_sunday: "Friday, Sunday",
         saturday: "Saturday",
         main_heading: "Daily rental house in the center of Kyiv",
-        // prices_info: "More then 10 people + 1000 uah/person",
-        prices_info: "Friday, Saturday and Sunday - price up to 10 people, then plus 1000 UAH/person",
+        prices_info: "More then 15 people + 1000 uah/person",
+        // prices_info: "Friday, Saturday and Sunday - price up to 10 people, then plus 1000 UAH/person",
         deposit: "Deposit",
         deposit_info: "returned upon departure",
         rules: "Check-in is at 15:00. Check out at 11:00 the next day.",
@@ -41,7 +41,7 @@ export const messages = {
         availability_info: "The reserved dates are already marked in the calendar!",
         video_view_heading: "Video review",
         video_view: "Video",
-        prices_discount: "Promotion! Price from Monday to Thursday - up to 15 people"
+        // prices_discount: "Promotion! Price from Monday to Thursday - up to 15 people"
     },
     ua: {
         about: "Основне",
@@ -76,15 +76,15 @@ export const messages = {
         friday_sunday: "П'ятниця, Неділя",
         saturday: "Субота",
         main_heading: "Оренда будинку подобово у центрі Києва",
-        prices_info: "П'ятниця, субота та неділя - ціна до 10 осіб, далі плюс 1000 грн/особа",
-        // prices_info: "Більше 10 осіб + 1000 грн/особа",
+        // prices_info: "П'ятниця, субота та неділя - ціна до 10 осіб, далі плюс 1000 грн/особа",
+        prices_info: "Більше 15 осіб + 1000 грн/особа",
         deposit: "Застава",
         deposit_info: "повертається при виїзді",
-        rules: "Заїзд о 15:00. Виїзд о 11:00 наступного дня.",
+        rules: "Заїзд о 15:00. Виїзд об 11:00 наступного дня.",
         see_dates: "Вільні дати",
         availability_info: "Заброньовані дати вже відмічені у календарі!",
         video_view_heading: "Відеоогляд",
         video_view: "Відео",
-        prices_discount: "Акція! Ціна з понеділка по четвер - до 15 людей!"
+        // prices_discount: "Акція! Ціна з понеділка по четвер - до 15 людей!"
     },
 }
