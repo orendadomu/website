@@ -31,6 +31,7 @@ export const messages = {
         weekdays: "Weekdays (mon-thu)",
         friday: "Friday",
         sunday: "Sunday",
+        saturday_sunday: "Saturday / Sunday",
         friday_sunday: "Friday, Sunday",
         saturday: "Saturday",
         main_heading: "Daily rental house in the center of Kyiv",
@@ -45,6 +46,7 @@ export const messages = {
         availability_info: "The reserved dates are already marked in the calendar!",
         video_view_heading: "Video review",
         video_view: "Video",
+        busy: "Already taken"
         // prices_discount: "Promotion! Price from Monday to Thursday - up to 15 people"
     },
     ua: {
@@ -79,7 +81,8 @@ export const messages = {
         weekdays: "Будні (пн-чт)",
         friday: "П'ятниця",
         sunday: "Неділя",
-        friday_sunday: "П'ятниця, Неділя",
+        saturday_sunday: "Субота / Неділя",
+        friday_sunday: "П'ятниця / Неділя",
         saturday: "Субота",
         main_heading: "Оренда будинку подобово у центрі Києва",
         // prices_info: "П'ятниця, субота та неділя - ціна до 10 осіб, далі плюс 1000 грн/особа",
@@ -93,6 +96,7 @@ export const messages = {
         availability_info: "Заброньовані дати вже відмічені у календарі!",
         video_view_heading: "Відеоогляд",
         video_view: "Відео",
+        busy: "Вже зайняті"
         // prices_discount: "Акція! Ціна з понеділка по четвер - до 15 людей!"
     },
 }

@@ -8,7 +8,7 @@
       {{ $t("prices_heading_july") }}
     </h2>
 
-    <div class="prices__items-max">
+    <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices_july" :key="key">
         <div class="prices__item-icon">
           <img :src="`/img/prices_${i + 1}.svg`" />
@@ -17,10 +17,12 @@
           <span>{{ $t(key) }}</span>
         </div>
         <div class="prices__item-body">
-          <span> {{ val }}$ </span>
+          <span> {{ val ? val + '$' : $t('busy')}} </span>
         </div>
       </div>
     </div>
+
+    <br>
 
     <h2 class="app-heading" style="padding-top: 24px">
       {{ $t("prices_heading_next") }}
@@ -55,8 +57,7 @@ import { ref } from "vue";
 const prices_july = {
   weekdays: "400",
   friday: "700",
-  saturday: "1200",
-  sunday: "650",
+  saturday_sunday: 0
 };
 
 const prices = {
