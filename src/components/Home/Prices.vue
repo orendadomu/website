@@ -17,7 +17,7 @@
           <span>{{ $t(key) }}</span>
         </div>
         <div class="prices__item-body">
-          <span> {{ val ? val + '$' : $t('busy')}} </span>
+          <span> {{ val ? val : $t('busy')}} </span>
         </div>
       </div>
     </div>
@@ -55,8 +55,8 @@
 import { ref } from "vue";
 
 const prices_july = {
-  weekdays: "400",
-  friday: "700",
+  weekdays: "400$",
+  friday: "500$ (24.07)",
   saturday_sunday: 0
 };
 
