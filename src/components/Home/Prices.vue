@@ -1,14 +1,14 @@
 <template>
   <div class="prices">
     <div class="prices__line app-line"></div>
-    <!-- <h2 class="app-heading">
-      {{ $t("prices_heading") }}
-    </h2> -->
     <h2 class="app-heading">
-      {{ $t("prices_heading_july") }}
+      {{ $t("prices_heading") }}
     </h2>
+    <!-- <h2 class="app-heading">
+      {{ $t("prices_heading_july") }}
+    </h2> -->
 
-    <div class="prices__items">
+    <!-- <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices_july" :key="key">
         <div class="prices__item-icon">
           <img :src="`/img/prices_${i + 1}.svg`" />
@@ -20,13 +20,13 @@
           <span> {{ val ? val : $t('busy')}} </span>
         </div>
       </div>
-    </div>
-
+    </div> -->
+<!-- 
     <br>
 
     <h2 class="app-heading" style="padding-top: 24px">
       {{ $t("prices_heading_next") }}
-    </h2>
+    </h2> -->
 
     <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices" :key="key">
@@ -54,11 +54,11 @@
 <script setup>
 import { ref } from "vue";
 
-const prices_july = {
-  weekdays: "400$",
-  friday: "500$ (24.07)",
-  saturday_sunday: 0
-};
+// const prices_july = {
+//   weekdays: "400$",
+//   friday: "500$ (24.07)",
+//   saturday_sunday: 0
+// };
 
 const prices = {
   weekdays: "450",
