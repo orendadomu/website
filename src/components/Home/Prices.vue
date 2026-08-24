@@ -21,12 +21,16 @@
         </div>
       </div>
     </div> -->
-<!-- 
+    <!-- 
     <br>
 
     <h2 class="app-heading" style="padding-top: 24px">
       {{ $t("prices_heading_next") }}
     </h2> -->
+
+    <p class="app-subheading prices__discount">
+      АКЦІЯ!!! На останні дати серпня - 28.08 (п'ятниця), 30.08 (неділя) - 600$
+    </p>
 
     <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices" :key="key">
@@ -61,9 +65,9 @@ import { ref } from "vue";
 // };
 
 const prices = {
-  weekdays: "450",
-  friday_sunday: "800",
-  saturday: "1200",
+  weekdays: "400",
+  friday_sunday: "700",
+  saturday: "1100",
 };
 </script>
 
@@ -74,6 +78,15 @@ const prices = {
 
 .prices {
   padding: $padding;
+
+  &__discount {
+    margin-bottom: 32px;
+    margin-top: 20px;
+    background: red;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 4px;
+  }
 
   @media screen and (max-width: 768px) {
     padding: $padding_mobile;
