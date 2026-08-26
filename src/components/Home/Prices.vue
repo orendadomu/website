@@ -28,10 +28,6 @@
       {{ $t("prices_heading_next") }}
     </h2> -->
 
-    <p class="app-subheading prices__discount">
-      АКЦІЯ!!! На останню дату серпня - 30.08 (неділя) - 600$
-    </p>
-
     <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices" :key="key">
         <div class="prices__item-icon">
