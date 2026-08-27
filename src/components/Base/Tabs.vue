@@ -49,20 +49,21 @@ const emit = defineEmits(["update"]);
 const tabs = [
   {
     id: 1,
-    content: ["cinema", "garage", "gameroom_1", "gameroom_2", "bathroom_1"],
+    content: ["cinema", "garage", "gameroom_2", "gameroom_1", "bathroom_2"],
   },
   {
     id: 2,
-    content: ["living_room", "kitchen", "kitchen_2", "bedroom_1", "bathroom_2"],
+    // content: ["living_room", "kitchen", "kitchen_2", "bedroom_1", "bathroom_2"],
+    content: ["living_room", "kitchen", "gameroom_3", "bedroom_1", "bedroom_2"],
   },
   {
     id: 3,
     content: [
-      "bedroom_2",
-      "bathroom_3",
       "bedroom_3",
-      "bathroom_4",
+      "bathroom_3",
       "bedroom_4",
+      "bathroom_4",
+      "bedroom_5",
     ],
   },
 ];
