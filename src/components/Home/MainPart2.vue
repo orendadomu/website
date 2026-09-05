@@ -88,6 +88,22 @@ $font-border-color: rgba(13, 13, 13, 0.75);
   // align-items: center;
   justify-content: center;
 
+  &::before {
+    content: "";
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.25) 60%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
   // @media screen and (min-width: 1200px) {
   //   height: 100vh;
   // }
@@ -141,6 +157,10 @@ $font-border-color: rgba(13, 13, 13, 0.75);
       top: 0;
       left: 0;
       width: 100%;
+
+      @media screen and (max-width: 480px) {
+        display: none;
+      }
     }
   }
 
