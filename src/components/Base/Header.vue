@@ -11,7 +11,7 @@
       </li>
     </ul>
 
-    <div class="app-header__right">
+    <div class="app-header__right" :class="{ 'app-header__right--active': isHeaderBg }">
       <div class="app-header__social">
         <a
           class="app-header__social-link app-header__social-link--circle"
@@ -112,7 +112,7 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid $border-color;
+  // border-bottom: 1px solid $border-color;
   transition: background 0.1s;
 
   @media screen and (max-width: 768px) {
@@ -121,6 +121,7 @@ onMounted(() => {
 
   &--bg {
     background: $background-color;
+    border-bottom: 1px solid $border-color;
   }
 
   &__nav {
@@ -212,8 +213,12 @@ onMounted(() => {
   }
 
   &__right {
-    display: flex;
+    display: none;
     align-items: center;
+
+    &--active {
+      display: flex;
+    }
 
     @media screen and (max-width: 768px) {
       width: 100%;
