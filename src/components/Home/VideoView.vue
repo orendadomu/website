@@ -5,7 +5,7 @@
       {{ $t("video_view_heading") }}
     </h2>
     <iframe
-      src="https://www.youtube.com/embed/zZMJ9dV3a6I?si=pFXy-Cx3HwzdlYr0"
+      src="https://www.youtube.com/embed/l7-EF0Gwc2g?si=wrbYZQ7PhCSmdYep"
       title="Chill house view video"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
