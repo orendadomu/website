@@ -18,7 +18,7 @@ import { ref, inject } from "vue";
 
 import { useUsers } from "@/store/users.js";
 
-import MainPart from "@/components/Home/MainPart2.vue";
+import MainPart from "@/components/Home/MainPart.vue";
 import About from "@/components/Home/About.vue";
 import Prices from "@/components/Home/Prices.vue";
 import Availability from "@/components/Availability.vue";
