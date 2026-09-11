@@ -2,7 +2,7 @@
   <div class="main">
     <video
       class="main__video--blur"
-      :src="`/video/hero.mp4`"
+      :src="`/video/hero.MP4`"
       autoplay
       muted
       loop
@@ -11,7 +11,7 @@
 
     <video
       class="main__video"
-      :src="`/video/hero.mp4`"
+      :src="`/video/hero.MP4`"
       autoplay
       muted
       loop
