@@ -28,9 +28,9 @@
       {{ $t("prices_heading_next") }}
     </h2> -->
 
-    <p class="app-subheading color-red" style="margin-bottom: 40px">
+    <!-- <p class="app-subheading color-red" style="margin-bottom: 40px">
       ЗНИЖКА! На цю п'ятницю (25.09) - 550$ (замість 800$)
-    </p>
+    </p> -->
 
     <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices" :key="key">
