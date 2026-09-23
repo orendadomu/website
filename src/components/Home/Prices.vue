@@ -28,6 +28,10 @@
       {{ $t("prices_heading_next") }}
     </h2> -->
 
+    <p class="app-subheading color-red" style="margin-bottom: 40px">
+      ЗНИЖКА! На цю п'ятницю (25.09) - 550$ (замість 800$)
+    </p>
+
     <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices" :key="key">
         <div class="prices__item-icon">
@@ -62,8 +66,9 @@ import { ref } from "vue";
 
 const prices = {
   weekdays: "400",
-  friday_sunday: "700",
-  saturday: "1100",
+  friday: "800",
+  saturday: "1200",
+  sunday: "700"
 };
 </script>
 
@@ -91,7 +96,8 @@ const prices = {
   &__items {
     margin-top: $margin-big;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     // grid-gap: $margin-small;
     grid-gap: $margin-big;
 
