@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card__preview">
-      <img :src="`/img/photo/${props.content}.jpg`" />
+      <img :src="`/img/photo/${props.content}.jpg`" :alt="$t(`rooms.${props.content}`)" />
     </div>
     <p class="card__info">
       {{ $t(`rooms.${props.content}`) }}
