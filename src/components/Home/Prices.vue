@@ -28,9 +28,9 @@
       {{ $t("prices_heading_next") }}
     </h2> -->
 
-    <p class="app-subheading color-red" style="margin-bottom: 40px">
+    <!-- <p class="app-subheading color-red" style="margin-bottom: 40px">
       ЗНИЖКА! На цей тиждень - пн (28.09), вт (29.09) - 300$
-    </p>
+    </p> -->
 
     <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices" :key="key">
@@ -47,6 +47,7 @@
     </div>
 
     <p class="app-subheading">
+      З листопада ціни на п'ятницю та суботу +100$ <br />
       {{ $t("prices_info") }} <br />
       {{ $t("deposit") }} 500$ ({{ $t("deposit_info") }})
       <br />
@@ -94,7 +95,8 @@ const prices = {
   }
 
   &__items {
-    margin-top: $margin-big;
+    // margin-top: $margin-big;
+    margin-top: 40px;
     display: grid;
     // grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
