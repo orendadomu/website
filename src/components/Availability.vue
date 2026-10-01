@@ -14,13 +14,15 @@
           <VueSpinner size="64" color="white" />
         </div>
 
-        <Calendar
-          v-model="date"
-          :disabled-dates="disabledRanges"
-          :attributes="attributes"
-          expanded
-          :locale="{ id: locale === 'ua' ? 'ukr' : 'en', firstDayOfWeek: 2 }"
-        />
+        <ClientOnly>
+          <Calendar
+            v-model="date"
+            :disabled-dates="disabledRanges"
+            :attributes="attributes"
+            expanded
+            :locale="{ id: locale === 'uk' ? 'ukr' : 'en', firstDayOfWeek: 2 }"
+          />
+        </ClientOnly>
         <!-- :columns="2"  -->
       </div>
     </div>
@@ -37,7 +39,7 @@ import { VueSpinner } from "vue3-spinners";
 
 import { useScreens } from "vue-screen-utils";
 // const columns = mapCurrent({ lg: 2 }, 1);
-const isLoading = ref(true)
+const isLoading = ref(true);
 
 const props = defineProps({
   dates: {
@@ -49,7 +51,7 @@ const props = defineProps({
 watch(
   () => props.dates,
   (val) => {
-    isLoading.value = false
+    isLoading.value = false;
   }
 );
 

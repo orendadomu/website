@@ -52,7 +52,7 @@ export const messages = {
         busy: "Already taken"
         // prices_discount: "Promotion! Price from Monday to Thursday - up to 15 people"
     },
-    ua: {
+    uk: {
         about: "Основне",
         special: "Особливості",
         prices: "Ціни",

@@ -79,7 +79,7 @@ watch(
   }
 );
 
-const options = ["en", "ua"];
+const options = ["en", "uk"];
 
 const navigateTo = (link) => {
   document

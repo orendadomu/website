@@ -5,12 +5,39 @@
         <img src="/img/close.svg" />
       </button>
       <div class="videos__modal-inner">
-        <Carousel v-bind="carouselConfigModal" v-model="activeSlide">
-          <Slide v-for="slide1 in 9" :key="slide1">
+        <ClientOnly>
+          <Carousel v-bind="carouselConfigModal" v-model="activeSlide">
+            <Slide v-for="slide1 in 9" :key="slide1">
+              <div class="carousel__item">
+                <video controls class="videos__item" :id="`slide-${slide1}`">
+                  <source :src="`/video/${slide1}.mov`" type="video/mp4" />
+                </video>
+              </div>
+            </Slide>
+
+            <template #addons>
+              <Navigation />
+              <Pagination />
+            </template>
+          </Carousel>
+        </ClientOnly>
+      </div>
+    </div>
+
+    <div class="videos__preview">
+      <ClientOnly>
+        <Carousel v-bind="carouselConfig">
+          <Slide v-for="slide in 9" :key="slide">
             <div class="carousel__item">
-              <video controls class="videos__item" :id="`slide-${slide1}`">
-                <source :src="`/video/${slide1}.mov`" type="video/mp4" />
-              </video>
+              <div class="videos__preview-item" @click="openModal(slide)">
+                <button class="videos__preview-button">
+                  <img src="/img/play.svg" />
+                </button>
+                <img
+                  :src="`/video/previews/${slide}.jpg`"
+                  class="videos__preview-image"
+                />
+              </div>
             </div>
           </Slide>
 
@@ -19,30 +46,7 @@
             <Pagination />
           </template>
         </Carousel>
-      </div>
-    </div>
-
-    <div class="videos__preview">
-      <Carousel v-bind="carouselConfig">
-        <Slide v-for="slide in 9" :key="slide">
-          <div class="carousel__item">
-            <div class="videos__preview-item" @click="openModal(slide)">
-              <button class="videos__preview-button">
-                <img src="/img/play.svg" />
-              </button>
-              <img
-                :src="`/video/previews/${slide}.jpg`"
-                class="videos__preview-image"
-              />
-            </div>
-          </div>
-        </Slide>
-
-        <template #addons>
-          <Navigation />
-          <Pagination />
-        </template>
-      </Carousel>
+      </ClientOnly>
     </div>
   </div>
 </template>

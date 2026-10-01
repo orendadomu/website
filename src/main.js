@@ -1,53 +1,64 @@
-import App from "./App.vue";
+import { ViteSSG } from 'vite-ssg'
+import { createPinia } from 'pinia'
+import { createI18n } from 'vue-i18n'
+import { createVfm } from 'vue-final-modal'
+import App from './App.vue'
+// import { routes } from './router/routes' // экспортируйте именно МАССИВ routes, не createRouter()
+// import messages from './i18n'
+import { messages } from "./i18n/messages.js"
 import "@/assets/scss/index.scss";
 
-import { createApp } from "vue";
-import { createPinia } from "pinia";
-import router from "@/router/index.js";
+const Home = () => import("./pages/Home.vue");
 
-// import { toast } from "vue3-toastify";
-// import "vue3-toastify/dist/index.css";
-// import "vue-multiselect/dist/vue-multiselect.css";
+const routes = [
+    {
+        path: "/",
+        name: "home",
+        component: Home,
+        // meta: {
+        //   requiresAuth: true
+        // }
+    },
+]
 
-// import VueAwesomePaginate from "vue-awesome-paginate";
-// import "vue-awesome-paginate/dist/style.css";
+export const createApp = ViteSSG(
+    App,
+    { routes, base: import.meta.env.BASE_URL },
+    ({ app, router, initialState, isClient }) => {
+        const pinia = createPinia()
+        app.use(pinia)
+        if (import.meta.env.SSR) initialState.pinia = pinia.state.value
+        else pinia.state.value = initialState.pinia || {}
 
-import { createVfm } from 'vue-final-modal'
+        app.use(createI18n({ legacy: false, locale: 'uk', messages }))
+        app.use(createVfm())
+        // остальные плагины — сюда же
+    },
+)
 
-import { createI18n } from "vue-i18n";
-import { messages } from "@/i18n/messages.js"
 
-const i18n = createI18n({
-    locale: "ua",
-    fallbackLocale: "en",
-    messages
-    // messages: {
-    //     en: {
-    //         message: "hello"
-    //     },
-    //     ua: {
-    //         message: "Привіт"
-    //     },
-    // },
-});
-const vfm = createVfm()
 
-const pinia = createPinia();
-const app = createApp(App);
+////////
+// import "@/assets/scss/index.scss";
+// import router from "@/router/index.js";
 
-app.use(pinia);
-app.use(router);
-app.use(vfm)
-app.use(i18n)
-// app.use(VueAwesomePaginate)
-app.mount("#root");
+// import { createVfm } from 'vue-final-modal'
 
-// export const useToast = (message, type) => {
-//     toast(message, {
-//         type,
-//         theme: "colored",
-//         position: "top-center",
-//         transition: "slide",
-//         dangerouslyHTMLString: true,
-//     });
-// }
+// import { createI18n } from "vue-i18n";
+// import { messages } from "@/i18n/messages.js"
+
+// const i18n = createI18n({
+//     locale: "ua",
+//     fallbackLocale: "en",
+//     messages
+// });
+// const vfm = createVfm()
+
+// const pinia = createPinia();
+// const app = createApp(App);
+
+// app.use(pinia);
+// app.use(router);
+// app.use(vfm)
+// app.use(i18n)
+// app.mount("#root");
