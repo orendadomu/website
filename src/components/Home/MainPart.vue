@@ -25,6 +25,10 @@
         {{ $t("main_heading") }}
       </h1>
 
+      <p class="main__description">
+        {{ $t("main_description") }}
+      </p>
+
       <button
         type="button"
         class="main__more"
@@ -130,6 +134,10 @@ $font-border-color: rgba(13, 13, 13, 0.75);
         transform: scale(1.1);
       }
     }
+  }
+
+  &__description {
+    margin-top: 20px;
   }
 
   &__video {
