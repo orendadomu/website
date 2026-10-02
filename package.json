@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@mdi/font": "^7.3.67",
-    "@unhead/vue": "^3.4.2",
+    "@unhead/vue": "^2.1.17",
     "@vitejs/plugin-vue": "^5.2.4",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",

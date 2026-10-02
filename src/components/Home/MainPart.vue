@@ -42,6 +42,7 @@
         <a
           class="main__social-link"
           href="https://instagram.com/chill.kyiv/"
+          aria-label="Instagram Chill House"
           target="_blank"
         >
           <img src="/img/inst.svg" style="width: 26px" />
@@ -50,12 +51,13 @@
         <a
           class="main__social-link"
           href="https://t.me/ChillHouseKyiv"
+          aria-label="Написати в Telegram"
           target="_blank"
         >
           <img src="/img/tg.svg" style="width: 30px" />
         </a>
 
-        <a class="main__social-link" href="tel:+380777987777">
+        <a class="main__social-link" href="tel:+380777987777" aria-label="Зателефонувати: +38 077 798 77 77">
           <img src="/img/phone.svg" style="width: 28px" />
         </a>
       </div>

@@ -35,30 +35,3 @@ export const createApp = ViteSSG(
         // остальные плагины — сюда же
     },
 )
-
-
-
-////////
-// import "@/assets/scss/index.scss";
-// import router from "@/router/index.js";
-
-// import { createVfm } from 'vue-final-modal'
-
-// import { createI18n } from "vue-i18n";
-// import { messages } from "@/i18n/messages.js"
-
-// const i18n = createI18n({
-//     locale: "ua",
-//     fallbackLocale: "en",
-//     messages
-// });
-// const vfm = createVfm()
-
-// const pinia = createPinia();
-// const app = createApp(App);
-
-// app.use(pinia);
-// app.use(router);
-// app.use(vfm)
-// app.use(i18n)
-// app.mount("#root");

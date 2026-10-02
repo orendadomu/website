@@ -16,6 +16,7 @@
         <a
           class="app-header__social-link app-header__social-link--circle"
           href="https://instagram.com/chill.kyiv/"
+          aria-label="Instagram Chill House"
           target="_blank"
         >
           <img src="/img/inst.svg" style="width: 26px" />
@@ -24,6 +25,7 @@
         <a
           class="app-header__social-link app-header__social-link--circle"
           href="https://t.me/ChillHouseKyiv"
+          aria-label="Написати в Telegram"
           target="_blank"
         >
           <!-- https://telegram.me/arenda_dom_kiev -->
@@ -33,6 +35,7 @@
         <a
           class="app-header__social-link app-header__social-link--phone"
           href="tel:+380777987777"
+          aria-label="Зателефонувати: +38 077 798 77 77"
         >
           <img src="/img/phone.svg" />
           <p>+ (38) 077-798-77-77</p>

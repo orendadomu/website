@@ -26,14 +26,14 @@
 
 <script setup>
 import { useHead } from "@unhead/vue";
-import { ModalsContainer } from "vue-final-modal";
-import "vue-final-modal/style.css";
+// import { ModalsContainer } from "vue-final-modal";
+// import "vue-final-modal/style.css";
 
 import AppHeader from "./components/Base/Header.vue";
-import AppFooter from "./components/Base/Footer.vue";
+// import AppFooter from "./components/Base/Footer.vue";
 
 const description =
-  "Подобова оренда будинку для вечірок і відпочинку у ценрті Києва: 5 спалень, кінотеатр, караоке, більярд, PS5 Pro. До 30 гостей. Будні від $400.";
+  "Подобова оренда будинку для вечірок і відпочинку у центрі Києва: 5 спалень, кінотеатр, караоке, більярд, PS5 Pro. До 30 гостей. Будні від $400.";
 
 useHead({
   htmlAttrs: { lang: "uk" },
@@ -43,11 +43,6 @@ useHead({
       : "Будинок для вечірок у Києві — подобова оренда до 30 гостей | Chill House",
   meta: [
     { name: "description", content: description },
-    {
-      name: "keywords",
-      content:
-        "Оренда будинку Київ, будинок для вечірки Київ, будинок для відпочинку Київ, караоке, кінотеарт, будинок подобово Київ, Chill house Київ",
-    },
     {
       property: "og:title",
       content:
@@ -97,6 +92,7 @@ useHead({
           "Пінг-понг",
           "Камін",
           "Гараж на 4 авто",
+          "Автономне живлення: інвертор, генератор, сонячні панелі"
         ].map((name) => ({
           "@type": "LocationFeatureSpecification",
           name,
