@@ -127,9 +127,14 @@ $blue: white;
         }
         + .faq__item-text {
           opacity: 1;
-          max-height: 20em;
+          //   max-height: 20em;
+          max-height: 9em;
           transition: all 200ms linear;
           will-change: opacity, max-height;
+
+          @media screen and (max-width: 768px) {
+            max-height: 20em;
+          }
         }
       }
     }
