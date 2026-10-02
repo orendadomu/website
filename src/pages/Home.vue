@@ -6,8 +6,9 @@
     <Availability :dates="dates" />
     <VideoView />
     <Videos />
+    <Location />
     <div class="home__gradient">
-      <Location />
+      <Faq />
       <AppFooter />
     </div>
   </div>
@@ -23,6 +24,7 @@ import About from "@/components/Home/About.vue";
 import Prices from "@/components/Home/Prices.vue";
 import Availability from "@/components/Availability.vue";
 import Location from "@/components/Home/Location.vue";
+import Faq from "@/components/Home/Faq.vue";
 import VideoView from "@/components/Home/VideoView.vue";
 import Videos from "@/components/Home/Videos.vue";
 

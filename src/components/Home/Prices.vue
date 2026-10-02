@@ -65,11 +65,17 @@ import { ref } from "vue";
 //   saturday_sunday: 0
 // };
 
+// const prices = {
+//   weekdays: "400",
+//   friday: "800",
+//   saturday: "1100",
+//   sunday: "700"
+// };
+
 const prices = {
   weekdays: "400",
-  friday: "800",
+  friday_sunday: "700",
   saturday: "1100",
-  sunday: "700"
 };
 </script>
 
@@ -98,8 +104,8 @@ const prices = {
     // margin-top: $margin-big;
     margin-top: 40px;
     display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
     // grid-gap: $margin-small;
     grid-gap: $margin-big;
 

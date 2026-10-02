@@ -7,6 +7,7 @@ export const messages = {
         availability: "Availability",
         location: "Location",
         floor: "Floor",
+        faq_header: "FAQ",
         main_description: "Daily rental of a house for up to 30 guests—movie theater, karaoke, billiards, slot machines",
         rooms: {
             cinema: "Home theater: Playstation 5 Pro with games and professional karaoke are also connected",
@@ -50,7 +51,19 @@ export const messages = {
         availability_info: "The reserved dates are already marked in the calendar!",
         video_view_heading: "Video review",
         video_view: "Video",
-        busy: "Already taken"
+        busy: "Already taken",
+        faq_questions: {
+            faq_1_title: "Can I view the house before booking?",
+            faq_1_text: "Yes, viewings are available almost every day from 1:00 PM to 3:00 PM. To arrange a viewing, call us at +38 077 798 77 77 or message us on Telegram / Viber.",
+            faq_2_title: "How do I book the house?",
+            faq_2_text: "A date is booked only after a 50% prepayment of the base daily rate. We accept bank transfer (to our FOP business account), cash or cryptocurrency. Before booking, you can view the house or get all the details by calling +38 077 798 77 77 or messaging us on Telegram / Viber.",
+            faq_3_title: "Can I cancel my booking?",
+            faq_3_text: "If you cancel at least two weeks in advance, we will refund your prepayment in full (minus 6% tax if the prepayment was made to our FOP account). If you cancel less than two weeks in advance, the prepayment will be refunded as soon as the date is booked by another group. If you cancel less than a week in advance, the prepayment can be transferred to any other available date of your choice, also only once your original date is booked by another group.",
+            faq_4_title: "Is there electricity and internet during power outages?",
+            faq_4_text: "Yes. The house has a 25 kW inverter (up to 12 hours without grid power), solar panels and a backup generator for longer outages. Lights, Wi-Fi and all appliances keep working even during blackouts.",
+            faq_5_title: "What events can I host at the house?",
+            faq_5_text: "Birthday parties, corporate events and team building, DJ parties, bachelorette and bachelor parties, gender reveal parties, baby showers, engagement parties, music video, photo and commercial shoots, family evenings and getaways with friends."
+        }
         // prices_discount: "Promotion! Price from Monday to Thursday - up to 15 people"
     },
     uk: {
@@ -61,6 +74,7 @@ export const messages = {
         availability: "Доступність",
         location: "Локація",
         floor: "Поверх",
+        faq_header: "Часті запитання про оренду будинку",
         main_description: "Подобова оренда будинку до 30 гостей — кінотеатр, караоке, більярд, ігрові автомати",
         rooms: {
             cinema: "Домашній кінотеатр: підключена також Playstation 5 Pro з іграми та професійне караоке",
@@ -105,7 +119,20 @@ export const messages = {
         availability_info: "Заброньовані дати вже відмічені у календарі!",
         video_view_heading: "Відеоогляд",
         video_view: "Відео",
-        busy: "Вже зайняті"
+        busy: "Вже зайняті",
         // prices_discount: "Акція! Ціна з понеділка по четвер - до 15 людей!"
+        faq: "FAQ",
+        faq_questions: {
+            faq_1_title: "Чи можна попередньо переглянути будинок?",
+            faq_1_text: "Так, переглянути будинок можна майже щодня з 13:00 до 15:00. Щоб домовитися про перегляд, зателефонуйте за номером +38 077 798 77 77 або напишіть у Telegram / Viber.",
+            faq_2_title: "Як забронювати будинок?",
+            faq_2_text: "Дата бронюється лише після передоплати 50% від базової вартості за добу. Приймаємо на ФОП, готівкою або криптою. Перед бронюванням можна переглянути будинок або уточнити всі деталі за номером +38 077 798 77 77, або у Telegram / Viber.",
+            faq_3_title: "Чи можна скасувати бронювання?",
+            faq_3_text: "Якщо Ви повідомляєте про бажання скасувати бронювання не менше ніж за два тижні - ми повністю повертаємо передоплату (мінус 6% податків, якщо передоплата була здійснена на ФОП). Якщо менш ніж за два тижні - передоплата буде повернена одразу при бронюванні цієї дати іншою компанією. Якщо менш ніж за тиждень - передоплата буде перенесена на будь-яку іншу цікаву Вам та вільну дату, але також тільки при бронюванні цієї дати іншою компанією.",
+            faq_4_title: "Чи є світло та інтернет під час відключень?",
+            faq_4_text: "Так. У будинку інвертор на 25 кВт (до 12 годин без світла), сонячні панелі та генератор, як додатковий резерв на випадок довших відключень. Світло, Wi-Fi і вся техніка працюють навіть під час відключень.",
+            faq_5_title: "Які події можна провести в будинку?",
+            faq_5_text: "День народження, корпоратив і тімбілдинг, вечірка з діджеєм, дівич-вечір і парубочий вечір, гендер-паті, бебі-шавер, заручини, зйомки кліпів, фотосесії та реклами, сімейні вечори та відпочинок з друзями."
+        }
     },
 }
