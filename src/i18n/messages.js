@@ -8,6 +8,7 @@ export const messages = {
         location: "Location",
         floor: "Floor",
         faq_header: "FAQ",
+        blog: "Blog",
         main_description: "Daily rental of a house for up to 30 guests—movie theater, karaoke, billiards, slot machines",
         rooms: {
             cinema: "Home theater: Playstation 5 Pro with games and professional karaoke are also connected",
@@ -75,6 +76,7 @@ export const messages = {
         location: "Локація",
         floor: "Поверх",
         faq_header: "Часті запитання про оренду будинку",
+        blog: "Блог",
         main_description: "Подобова оренда будинку до 30 гостей — кінотеатр, караоке, більярд, ігрові автомати",
         rooms: {
             cinema: "Домашній кінотеатр: підключена також Playstation 5 Pro з іграми та професійне караоке",

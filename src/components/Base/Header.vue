@@ -9,9 +9,15 @@
       >
         {{ `${t(item)}` }}
       </li>
+      <li class="app-header__nav-link">
+        <RouterLink to="/blog/">{{ t("blog") }}</RouterLink>
+      </li>
     </ul>
 
-    <div class="app-header__right" :class="{ 'app-header__right--active': isHeaderBg }">
+    <div
+      class="app-header__right"
+      :class="{ 'app-header__right--active': isHeaderBg }"
+    >
       <div class="app-header__social">
         <a
           class="app-header__social-link app-header__social-link--circle"
@@ -64,12 +70,16 @@ const navigateButtons = [
   "availability",
   "video_view",
   "location",
-  "faq"
+  "faq",
 ];
 import { ref, watch, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 
 import Multiselect from "vue-multiselect";
+
+const route = useRoute();
+const router = useRouter();
 
 const { locale, t } = useI18n(); // Get the locale ref and translation function
 
@@ -85,11 +95,34 @@ watch(
 
 const options = ["en", "uk"];
 
-const navigateTo = (link) => {
-  document
-    .querySelector(`.${link}__line`)
-    .scrollIntoView({ block: "start", behavior: "smooth" });
+const waitForElement = (selector, timeout = 2000) =>
+  new Promise((resolve) => {
+    const start = performance.now();
+    const check = () => {
+      const el = document.querySelector(selector);
+      if (el || performance.now() - start > timeout) return resolve(el);
+      requestAnimationFrame(check);
+    };
+    check();
+  });
+
+const navigateTo = async (link) => {
+  const selector = `.${link}__line`;
+
+  // Не на головній (напр. у блозі) → спершу переходимо на головну
+  if (route.path !== "/") {
+    await router.push("/");
+  }
+
+  const el = await waitForElement(selector);
+  el?.scrollIntoView({ block: "start", behavior: "smooth" });
 };
+
+// const navigateTo = (link) => {
+//   document
+//     .querySelector(`.${link}__line`)
+//     .scrollIntoView({ block: "start", behavior: "smooth" });
+// };
 
 onMounted(() => {
   window.addEventListener("scroll", () => {
@@ -149,6 +182,11 @@ onMounted(() => {
       &:hover {
         transform: scale(1.05);
         // font-weight: 500;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
       }
     }
   }

@@ -7,6 +7,7 @@
     <VideoView />
     <Videos />
     <Location />
+    <BlogPreview />
     <div class="home__gradient">
       <Faq />
       <AppFooter />
@@ -27,6 +28,7 @@ import Location from "@/components/Home/Location.vue";
 import Faq from "@/components/Home/Faq.vue";
 import VideoView from "@/components/Home/VideoView.vue";
 import Videos from "@/components/Home/Videos.vue";
+import BlogPreview from "@/components/Home/BlogPreview.vue";
 
 import AppFooter from "@/components/Base/Footer.vue";
 
