@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build && cp dist/index.html dist/404.html",
+    "build": "vite-ssg build && cp dist/404/index.html dist/404.html",
     "preview": "vite preview",
     "host": "vite --host",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",

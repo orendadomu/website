@@ -25,6 +25,26 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+import { useHead } from "@unhead/vue";
+import { useI18n } from "vue-i18n";
+import AppHeader from "./components/Base/Header.vue";
+
+const { locale } = useI18n();
+
+useHead({
+  htmlAttrs: { lang: computed(() => locale.value) },
+  titleTemplate: (title) =>
+    title ? `${title} | Chill House Київ` : "Chill House Kyiv",
+  meta: [
+    { property: "og:site_name", content: "Chill House Kyiv" },
+    { property: "og:image", content: "https://chillhouse.kiev.ua/preview.jpg" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ],
+});
+</script>
+
+<!--<script setup>
 import { useHead } from "@unhead/vue";
 // import { ModalsContainer } from "vue-final-modal";
 // import "vue-final-modal/style.css";
@@ -102,34 +122,4 @@ useHead({
     },
   ],
 });
-</script>
-
-
-<!--
-<script setup>
-// import { ref, onMounted } from "vue";
-
-import AppHeader from "./components/Base/Header.vue";
-// import AppFooter from "@/components/Base/Footer.vue";
-
-import { useRoute, useRouter } from "vue-router";
-import { useBase } from "./store/base.js";
-import { ModalsContainer } from "vue-final-modal";
-import "vue-final-modal/style.css";
-
-const route = useRoute();
-const router = useRouter();
-
-const baseStore = useBase();
-
-// const loading = ref(token.value ? true : false);
-
-// onMounted(() => {
-//   //   if (token.value) {
-//   //     await authStore.getMe();
-//   //     // setTimeout(() => {
-//   //     //   loading.value = false;
-//   //     // }, 1000);
-//   //   }
-// });
 </script> -->

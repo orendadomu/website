@@ -9,7 +9,7 @@
       >
         {{ `${t(item)}` }}
       </li>
-      <li class="app-header__nav-link">
+      <li class="app-header__nav-link"  v-if="locale === 'uk'">
         <RouterLink to="/blog/">{{ t("blog") }}</RouterLink>
       </li>
     </ul>
@@ -22,7 +22,7 @@
         <a
           class="app-header__social-link app-header__social-link--circle"
           href="https://instagram.com/chill.kyiv/"
-          aria-label="Instagram Chill House"
+          :aria-label="t('aria_instagram')"
           target="_blank"
         >
           <img src="/img/inst.svg" style="width: 26px" />
@@ -31,17 +31,16 @@
         <a
           class="app-header__social-link app-header__social-link--circle"
           href="https://t.me/ChillHouseKyiv"
-          aria-label="Написати в Telegram"
+          :aria-label="t('aria_telegram')"
           target="_blank"
         >
-          <!-- https://telegram.me/arenda_dom_kiev -->
           <img src="/img/tg.svg" style="width: 30px" />
         </a>
 
         <a
           class="app-header__social-link app-header__social-link--phone"
           href="tel:+380777987777"
-          aria-label="Зателефонувати: +38 077 798 77 77"
+          :aria-label="t('aria_call')"
         >
           <img src="/img/phone.svg" />
           <p>+ (38) 077-798-77-77</p>
@@ -50,10 +49,12 @@
       <multiselect
         v-model="selectedLanguage"
         :options="options"
+        :custom-label="languageLabel"
         :searchable="false"
         :allow-empty="false"
         :show-labels="false"
         :is-open="true"
+        :aria-label="t('language')"
       ></multiselect>
     </div>
 
@@ -72,9 +73,11 @@ const navigateButtons = [
   "location",
   "faq",
 ];
-import { ref, watch, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
+
+import { localeCodes, homePath } from "@/i18n/locales.js";
 
 import Multiselect from "vue-multiselect";
 
@@ -82,18 +85,40 @@ const route = useRoute();
 const router = useRouter();
 
 const { locale, t } = useI18n(); // Get the locale ref and translation function
+const LANGUAGE_LABELS = { uk: "UA", ru: "RU", en: "EN" };
+const languageLabel = (code) => LANGUAGE_LABELS[code] || code;
+const options = localeCodes; // ["uk", "ru", "en"]
+const selectedLanguage = computed({
+  get: () => locale.value,
+  set: (code) => {
+    if (code && code !== locale.value) router.push(homePath(code));
+  },
+});
 
-const selectedLanguage = ref(locale.value); // Initialize with current locale
+// const selectedLanguage = ref(locale.value); // Initialize with current locale
+
+
 const isHeaderBg = ref(false);
 
-watch(
-  () => selectedLanguage.value,
-  (val) => {
-    if (val) locale.value = val;
-  }
-);
+// watch(
+//   () => selectedLanguage.value,
+//   (val) => {
+//     if (val) locale.value = val;
+//   }
+// );
 
-const options = ["en", "uk"];
+// watch(selectedLanguage, (val) => {
+//   if (val && val !== locale.value) router.push(homePath(val));
+// });
+
+// // Мова змінилася через навігацію (кнопка «Назад») → оновлюємо селект
+// watch(locale, (val) => {
+//   selectedLanguage.value = val;
+// });
+
+// const options = localeCodes;
+
+// const options = ["en", "uk"];
 
 const waitForElement = (selector, timeout = 2000) =>
   new Promise((resolve) => {
@@ -110,8 +135,13 @@ const navigateTo = async (link) => {
   const selector = `.${link}__line`;
 
   // Не на головній (напр. у блозі) → спершу переходимо на головну
-  if (route.path !== "/") {
-    await router.push("/");
+  // if (route.path !== "/") {
+  //   await router.push("/");
+  // }
+
+  const home = homePath(locale.value);
+  if (route.path !== home) {
+    await router.push(home);
   }
 
   const el = await waitForElement(selector);

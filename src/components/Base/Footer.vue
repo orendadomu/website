@@ -38,7 +38,7 @@
         target="_blank"
         rel="noopener"
       >
-        Цимбалів Яр, 23б, Київ · м. Деміївська
+        {{ $t("address") }}
       </a>
       <a href="tel:+380777987777">+38 077 798 77 77</a>
     </address>

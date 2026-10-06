@@ -47,7 +47,7 @@
     </div>
 
     <p class="app-subheading">
-      З листопада ціни на п'ятницю та суботу +100$ <br />
+      {{ $t("prices_november") }} <br />
       {{ $t("prices_info") }} <br />
       {{ $t("deposit") }} 500$ ({{ $t("deposit_info") }})
       <br />

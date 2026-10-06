@@ -75,7 +75,7 @@ body {
         // border-radius: 0;
         border-radius   : $border-radius;
         border          : 1px solid $border-color;
-        padding         : 10px 36px 0px 10px;
+        padding         : 12px 36px 0px 10px;
         min-height      : 46px;
         cursor          : pointer;
 
@@ -87,7 +87,8 @@ body {
     &__single {
         color     : $font-color;
         background: none;
-        font-size : $font-size;
+        // font-size : $font-size;
+        font-size: 16px;
     }
 
     &__select {
@@ -137,7 +138,8 @@ body {
         background      : none !important;
         color           : $font-color;
         // color        : black;
-        font-size       : $font-size;
+        // font-size       : $font-size;
+        font-size: 16px;
 
         // &:hover {
         //     background: none;
