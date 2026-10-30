@@ -47,7 +47,7 @@
     </div>
 
     <p class="app-subheading">
-      {{ $t("prices_november") }} <br />
+      {{ $t("prices_additional") }} <br />
       {{ $t("prices_info") }} <br />
       {{ $t("deposit") }} 500$ ({{ $t("deposit_info") }})
       <br />
@@ -65,18 +65,18 @@ import { ref } from "vue";
 //   saturday_sunday: 0
 // };
 
-// const prices = {
-//   weekdays: "400",
-//   friday: "800",
-//   saturday: "1100",
-//   sunday: "700"
-// };
-
 const prices = {
   weekdays: "400",
-  friday_sunday: "700",
+  friday: "800",
   saturday: "1100",
+  sunday: "700"
 };
+
+// const prices = {
+//   weekdays: "400",
+//   friday_sunday: "700",
+//   saturday: "1100",
+// };
 </script>
 
 <style lang="scss" scoped>
@@ -104,8 +104,8 @@ const prices = {
     // margin-top: $margin-big;
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     // grid-gap: $margin-small;
     grid-gap: $margin-big;
 
