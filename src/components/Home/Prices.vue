@@ -1,12 +1,12 @@
 <template>
   <div class="prices">
     <div class="prices__line app-line"></div>
+    <!-- <h2 class="app-heading">
+      {{ $t("prices_heading") }}
+    </h2> -->
     <h2 class="app-heading">
       {{ $t("prices_heading") }}
     </h2>
-    <!-- <h2 class="app-heading">
-      {{ $t("prices_heading_july") }}
-    </h2> -->
 
     <!-- <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices_july" :key="key">
@@ -24,11 +24,7 @@
     <!-- 
     <br>
 
-    <h2 class="app-heading" style="padding-top: 24px">
-      {{ $t("prices_heading_next") }}
-    </h2> -->
-
-    <!-- <p class="app-subheading color-red" style="margin-bottom: 40px">
+  <p class="app-subheading color-red" style="margin-bottom: 40px">
       ЗНИЖКА! На цей тиждень - пн (28.09), вт (29.09) - 300$
     </p> -->
 
@@ -46,8 +42,30 @@
       </div>
     </div>
 
+    <h2 class="app-heading" style="margin-top: 40px">
+      {{ $t("prices_heading_next") }}
+    </h2>
+
+    <div class="prices__items">
+      <div
+        class="prices__item"
+        v-for="(val, key, i) in prices_december"
+        :key="key"
+      >
+        <div class="prices__item-icon">
+          <img :src="`/img/prices_${i + 1}.svg`" />
+        </div>
+        <div class="prices__item-head">
+          <span>{{ $t(key) }}</span>
+        </div>
+        <div class="prices__item-body">
+          <span> {{ val }}$ </span>
+        </div>
+      </div>
+    </div>
+
     <p class="app-subheading">
-      {{ $t("prices_additional") }} <br />
+      <!-- {{ $t("prices_additional") }} <br /> -->
       {{ $t("prices_info") }} <br />
       {{ $t("deposit") }} 500$ ({{ $t("deposit_info") }})
       <br />
@@ -69,7 +87,14 @@ const prices = {
   weekdays: "400",
   friday: "800",
   saturday: "1200",
-  sunday: "700"
+  sunday: "700",
+};
+
+const prices_december = {
+  weekdays: "450",
+  friday: "900",
+  saturday: "1400",
+  sunday: "800",
 };
 
 // const prices = {
