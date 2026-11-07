@@ -93,7 +93,7 @@ const prices = {
 const prices_december = {
   weekdays: "450",
   friday: "900",
-  saturday: "1400",
+  saturday: "1500",
   sunday: "800",
 };
 
