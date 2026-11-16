@@ -23,10 +23,10 @@
     </div> -->
     <!-- 
     <br>
-
+-->
   <p class="app-subheading color-red" style="margin-bottom: 40px">
-      ЗНИЖКА! На цей тиждень - пн (28.09), вт (29.09) - 300$
-    </p> -->
+      ЗНИЖКА! На цю неділю (22.11) - 600$
+    </p> 
 
     <div class="prices__items">
       <div class="prices__item" v-for="(val, key, i) in prices" :key="key">
@@ -87,7 +87,7 @@ const prices = {
   weekdays: "400",
   friday: "800",
   saturday: "1200",
-  sunday: "700",
+  sunday: "600",
 };
 
 const prices_december = {
